@@ -52,7 +52,23 @@ body{
     text-align: center;
     cursor: pointer;
 }
+.change-formula{
+    font-size: 1vw;
+    text-shadow: 0 0 3px black;
+    padding: 0.25vw;
+    margin: 0.25vw;
+    text-align: center;
+    cursor: pointer;
+}
+.formula{
+    font-size: 1vw;
+    text-shadow: 0 0 3px black;
+    padding: 0.25vw;
+    margin: 0.25vw;
+    text-align: center;
+    cursor: pointer;
+}
 img#shape-img{
-    max-width: 20%;
+    max-width: 40%;
     align-items: center;
 }
