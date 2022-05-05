@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-
+        <div class="page-content">
             <div class="content">
                 <div class="container">
                     <div class="glassmorphism">
@@ -51,25 +51,58 @@
             </div>
 
             <div class="content">
-                <div class="container">
+                <div class="container-2">
                     <div class="glassmorphism">
                         <h1 class="change-formula" id="formula-left" onclick="change_formula_left()">Area</h1>
                     </div>
                     <div class="glassmorphism">
-                        <h1 class="formula" id="formula-topic">Area Formula: πr²</h1>
-                        <h1 class="formula" id="formula-detail">( 22/7 × Radius × Radius )</h1>
-                        <form id="input-form">
-                            <label for="first_value">r:</label>
-                            <input type="number" id="first_value" name="first_value">
-                          </form>
-                        <h1 class="formula" id="result">Result:</h1>
+                        <div>
+                            <h1 class="formula" id="formula-topic">Area Formula: π r ²</h1>
+                            <h1 class="formula" id="formula-detail">{ ( 22 / 7 ) × Radius × Radius }</h1>
+                            <h1 class="formula"></h1>
+                            <form id="input-form">
+                                <label class="formula" for="input_1">Radius ( r ) : </label><br>
+                                <input class="formula" type="number" id="input_1" name="input_1" min="0"><br>
+                            </form>
+                            <h1 class="gap-1"></h1>
+                            <button class="formula" onclick="calculator()">Calculate</button>
+                        </div>
                     </div>
                     <div class="glassmorphism">
-                        <h1 class="change-formula" id="formula-right"  onclick="change_formula_right()">Circumference</h1>
+                        <h1 class="formula" id="solution">Solution:</h1>
+                        <h1 class="gap-2"></h1>
+                        <div id="solution-box">
+                            <h1 class="formula" id="formula-1"></h1>
+                            <h1 class="formula" id="formula-2"></h1>
+                            <h1 class="formula" id="formula-3"></h1>
+                            <h1 class="formula" id="formula-4"></h1>
+                            <h1 class="formula" id="formula-5"></h1>
+                            <h1 class="formula"></h1>
+                            <h1 class="formula"></h1>
+                            <h1 class="formula"></h1>
+                            <h1 class="formula"></h1>
+                            <h1 class="formula"></h1>
+                        </div>
                     </div>
+                    <div class="glassmorphism">
+                        <h1 class="formula" id="result">Result:</h1>
+                        <div id="result-box">
+                            <h1 class="result"></h1>
+                            <h1 class="result" id="result-1"></h1>
+                            <h1 class="result"></h1>
+                            <h1 class="formula"></h1>
+                            <h1 class="result"></h1>
+                            <h1 class="result"></h1>
+                            <h1 class="gap-1"></h1>
+                        </div>
+                    </div>
+                    <div class="glassmorphism">
+                        <h1 class="change-formula" id="formula-right"  onclick="change_formula_right()">Circum ference</h1>
+                    </div>
+                    
                 </div>
             </div>
-
+        </div>
     </body>
     <script src="app.js"></script>
 </html>

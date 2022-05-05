@@ -18,12 +18,14 @@ function page_update(){
         case 0:
             document.getElementById("page-title").innerHTML = "Geometry Calculators"
             document.getElementById("title").innerHTML = "Geometry Calculators"
+            document.getElementById("solution").innerHTML = "Solution:"
+            document.getElementById("result").innerHTML = "Result:"
             //ใช้ Switch Case ตรวจสอบ Var dimension
             switch(dimension){
                 //กรณีที่ dimension = 0 | 2D
                 case 0:
                     document.getElementById("formula-left").innerHTML = "Area"
-                    document.getElementById("formula-right").innerHTML = "Circumference"
+                    document.getElementById("formula-right").innerHTML = "Circum ference"
                     //ใช้ Switch Case ตรวจสอบ Var shape
                     switch(shape){
                         //กรณีที่ shape = 0 | วงกลม, ทรงกลม
@@ -34,13 +36,19 @@ function page_update(){
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
                                 case 0:
-                                    document.getElementById("formula-topic").innerHTML = "- Formula: Area -"
-                                    document.getElementById("formula").innerHTML="πr²";
+                                    document.getElementById("formula-topic").innerHTML = "Area Formula: π r ²"
+                                    document.getElementById("formula-detail").innerHTML= "{ ( 22 / 7 ) × Radius × Radius }"
+                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">Radius ( r ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br>"
+                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
+                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
                                     break;
                                 //กรณีที่ formula = 1 | Circumference, Surface Area
                                 case 1:
-                                    document.getElementById("formula-topic").innerHTML = "- Formula: Circumference -"
-                                    document.getElementById("formula").innerHTML="2πr";
+                                    document.getElementById("formula-topic").innerHTML = "Circumference Formula: 2 π r"
+                                    document.getElementById("formula-detail").innerHTML= "{ 2 × ( 22 / 7 ) × Radius }"
+                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">Radius ( r ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br>"
+                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
+                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
                                     break;
                             }
                             break;
@@ -52,13 +60,13 @@ function page_update(){
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
                                 case 0:
-                                    document.getElementById("formula").innerHTML="w²";
-                                    document.getElementById("formula-topic").innerHTML = "- Formula: Area -"
+                                    document.getElementById("formula-topic").innerHTML="Area Formula: w ²";
+                                    document.getElementById("formula-detail").innerHTML = "( Width × Width )"
                                     break;
                                 //กรณีที่ formula = 1 | Circumference, Surface Area
                                 case 1:
-                                    document.getElementById("formula").innerHTML="w*4";
-                                    document.getElementById("formula-topic").innerHTML = "- Formula: Circumference -"
+                                    document.getElementById("formula-topic").innerHTML="Circumference Formula: w × 4";
+                                    document.getElementById("formula-detail").innerHTML = "( Width × 4 )"
                                     break;
                             }
                             break;
@@ -78,13 +86,19 @@ function page_update(){
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
                                 case 0:
-                                    document.getElementById("formula").innerHTML="4πr³/3";
-                                    document.getElementById("formula-topic").innerHTML = "- Formula: Volume -"
+                                    document.getElementById("formula-topic").innerHTML="Volume Formula: 4 π r ³ / 3";
+                                    document.getElementById("formula-detail").innerHTML = "[ { 4 × ( 22 / 7 ) × Radius × Radius × Radius } / 3 ]"
+                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">Radius ( r ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br>"
+                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
+                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
                                     break;
                                 //กรณีที่ formula = 1 | Circumference, Surface Area
                                 case 1:
-                                    document.getElementById("formula").innerHTML="4πr²";
-                                    document.getElementById("formula-topic").innerHTML = "- Formula: Surface Area -"
+                                    document.getElementById("formula-topic").innerHTML="Surface Area Formula: 4 π r ²";
+                                    document.getElementById("formula-detail").innerHTML = "{ 4 × ( 22 / 7 ) × Radius × Radius }"
+                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">Radius ( r ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br>"
+                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
+                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
                                     break;
                             }
                             break;
@@ -96,13 +110,13 @@ function page_update(){
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
                                 case 0:
-                                    document.getElementById("formula").innerHTML="w²h";
-                                    document.getElementById("formula-topic").innerHTML = "- Formula: Volume -"
+                                    document.getElementById("formula-topic").innerHTML="Volume Formula: w ² h";
+                                    document.getElementById("formula-detail").innerHTML = "( Width × Width × Height )"
                                     break;
                                 //กรณีที่ formula = 1 | Circumference, Surface Area
                                 case 1:
-                                    document.getElementById("formula").innerHTML="w²*6";
-                                    document.getElementById("formula-topic").innerHTML = "- Formula: Surface Area -"
+                                    document.getElementById("formula-topic").innerHTML="Surface Area Formula: w ² × 6";
+                                    document.getElementById("formula-detail").innerHTML = "( Width × Width × 6 )"
                                     break;
                             }
                             break;
@@ -114,6 +128,8 @@ function page_update(){
         case 1:
             document.getElementById("page-title").innerHTML = "เว็บไซต์คำนวณเรขาคณิต"
             document.getElementById("title").innerHTML = "เว็บไซต์คำนวณเรขาคณิต"
+            document.getElementById("solution").innerHTML = "วิธีทำ:"
+            document.getElementById("result").innerHTML = "ผลลัพธ์:"
             //ใช้ Switch Case ตรวจสอบ Var dimension
             switch(dimension){
                 //กรณีที่ dimension = 0 | 2D
@@ -130,13 +146,19 @@ function page_update(){
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
                                 case 0:
-                                    document.getElementById("formula-topic").innerHTML = "- สูตร: พื้นที่ -"
-                                    document.getElementById("formula").innerHTML="πr²";
+                                    document.getElementById("formula-topic").innerHTML = "สูตรหาพื้นที่: π r ²"
+                                    document.getElementById("formula-detail").innerHTML="{ ( 22 / 7 ) × รัศมี × รัศมี }";
+                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">รัศมี ( r ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br>"
+                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
+                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
                                     break;
                                 //กรณีที่ formula = 1 | Circumference, Surface Area
                                 case 1:
-                                    document.getElementById("formula-topic").innerHTML = "- สูตร: เส้นรอบวง -"
-                                    document.getElementById("formula").innerHTML="2πr";
+                                    document.getElementById("formula-topic").innerHTML = "สูตรหาเส้นรอบวง: 2 π r"
+                                    document.getElementById("formula-detail").innerHTML="{ 2 × ( 22 / 7 ) × รัศมี }";
+                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">รัศมี ( r ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br>"
+                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
+                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
                                     break;
                             }
                             break;
@@ -148,13 +170,13 @@ function page_update(){
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
                                 case 0:
-                                    document.getElementById("formula").innerHTML="w²";
-                                    document.getElementById("formula-topic").innerHTML = "- สูตร: พื้นที่ -"
+                                    document.getElementById("formula-topic").innerHTML="สูตรหาพื้นที่: w ²";
+                                    document.getElementById("formula-detail").innerHTML = "( ด้าน × ด้าน )"
                                     break;
                                 //กรณีที่ formula = 1 | Circumference, Surface Area
                                 case 1:
-                                    document.getElementById("formula").innerHTML="w*4";
-                                    document.getElementById("formula-topic").innerHTML = "- สูตร: เส้นรอบวง -"
+                                    document.getElementById("formula-topic").innerHTML="สูตรหาเส้นรอบวง: w × 4";
+                                    document.getElementById("formula-detail").innerHTML = "( ด้าน × 4 )"
                                     break;
                             }
                             break;
@@ -174,13 +196,19 @@ function page_update(){
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
                                 case 0:
-                                    document.getElementById("formula").innerHTML="4πr³/3";
-                                    document.getElementById("formula-topic").innerHTML = "- สูตร: ปริมาตร -"
+                                    document.getElementById("formula-topic").innerHTML="สูตรหาปริมาตร: 4 π r ³ / 3";
+                                    document.getElementById("formula-detail").innerHTML = "[ { 4 × ( 22 / 7 ) × รัศมี × รัศมี × รัศมี } / 3 ]"
+                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">รัศมี ( r ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br>"
+                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
+                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
                                     break;
                                 //กรณีที่ formula = 1 | Circumference, Surface Area
                                 case 1:
-                                    document.getElementById("formula").innerHTML="4πr²";
-                                    document.getElementById("formula-topic").innerHTML = "- สูตร: พื้นที่ผิว -"
+                                    document.getElementById("formula-topic").innerHTML="สูตรหาพื้นที่ผิว: 4 π r ²";
+                                    document.getElementById("formula-detail").innerHTML = "{ 4 × ( 22 / 7 ) × รัศมี × รัศมี }"
+                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">รัศมี ( r ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br>"
+                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
+                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
                                     break;
                             }
                             break;
@@ -192,13 +220,13 @@ function page_update(){
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
                                 case 0:
-                                    document.getElementById("formula").innerHTML="w²h";
-                                    document.getElementById("formula-topic").innerHTML = "- สูตร: ปริมาตร -"
+                                    document.getElementById("formula-topic").innerHTML="สูตรหาปริมาตร: w ² h";
+                                    document.getElementById("formula-detail").innerHTML = "{ ( ด้าน × ด้าน ) × สูง }"
                                     break;
                                 //กรณีที่ formula = 1 | Circumference, Surface Area
                                 case 1:
-                                    document.getElementById("formula").innerHTML="w²*6";
-                                    document.getElementById("formula-topic").innerHTML = "- สูตร: พื้นที่ผิว -"
+                                    document.getElementById("formula-topic").innerHTML="สูตรหาพื้นที่ผิว: w ² × 6";
+                                    document.getElementById("formula-detail").innerHTML = "{ ( ด้าน × ด้าน ) × 6 }"
                                     break;
                             }
                             break;
@@ -209,26 +237,31 @@ function page_update(){
     }
 }
 
+//ฟังก์ชั่นเปลี่ยนภาษา เป็น ภาษาอังกฤษ
 function EN_lang(){
     lang = 0
     page_update()
 }
 
+//ฟังก์ชั่นเปลี่ยนภาษา เป็น ภาษาไทย
 function TH_lang(){
     lang = 1
     page_update()
 }
 
+//ฟังก์ชั่นเปลี่ยนมิติของภาพ เป็น 2D
 function two_dimension(){
     dimension = 0
     page_update()
 }
 
+//ฟังก์ชั่นเปลี่ยนมิติของภาพ เป็น 3D
 function three_dimension(){
     dimension = 1
     page_update()
 }
 
+//ฟังก์ชั่นเปลี่ยนรูปเป็นรูปทางซ้าย
 function change_shape_left(){
     shape--
     if(shape < 0){
@@ -240,6 +273,7 @@ function change_shape_left(){
     }
 }
 
+//ฟังก์ชั่นเปลี่ยนรูปเป็นรูปทางขวา
 function change_shape_right(){
     shape++
     if(shape > 1){
@@ -251,12 +285,114 @@ function change_shape_right(){
     }
 }
 
+//ฟังก์ชั่นเปลี่ยนสูตรเป็น Area, Volume
 function change_formula_left(){
     formula = 0
     page_update()
 }
 
+//ฟังก์ชั่นเปลี่ยนสูตรเป็น Circumference, Surface Area
 function change_formula_right(){
     formula = 1
     page_update()
+}
+
+//var เก็บค่า radius, diameter, width, height
+var radius = 0
+var diameter = 0
+var width = 0
+var height = 0
+
+//var เก็บค่าผลัพธ์ที่ได้จากการคำนวณ
+var result = 0
+
+//ฟังก์ชั่นเครื่องคิดเลข ใช้ในการคำนวณหาผลลัพธ์
+function calculator(){
+    //
+    switch(dimension){
+        //
+        case 0:
+            //
+            switch(shape){
+                //
+                case 0:
+                    //
+                    switch(formula){
+                        //
+                        case 0:
+                            radius = document.getElementById("input_1").value;
+                            result = (22/7*radius*radius)
+                            document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1>"
+                            document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1>"
+                            document.getElementById("formula-1").innerHTML = "π r ²"
+                            document.getElementById("formula-2").innerHTML = "{ ( 22 / 7 ) × Radius × Radius }"
+                            document.getElementById("formula-3").innerHTML = "( 22 / 7 ) × " + radius + " × " + radius
+                            document.getElementById("formula-4").innerHTML = "( 22 / 7 ) × " + radius*radius
+                            document.getElementById("formula-5").innerHTML = result.toFixed(2)
+                            document.getElementById("result-1").innerHTML = result.toFixed(2)
+                            break;
+                        //
+                        case 1:
+                            radius = document.getElementById("input_1").value;
+                            result = (2*22/7*radius)
+                            document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1>"
+                            document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1>"
+                            document.getElementById("formula-1").innerHTML = "2 π r"
+                            document.getElementById("formula-2").innerHTML = "{ 2 × ( 22 / 7 ) × Radius }"
+                            document.getElementById("formula-3").innerHTML = "2 × ( 22 / 7 ) × " + radius
+                            document.getElementById("formula-4").innerHTML = "( 22 / 7 ) × " + radius*2
+                            document.getElementById("formula-5").innerHTML = result.toFixed(2)
+                            document.getElementById("result-1").innerHTML = result.toFixed(2)
+                            break;
+                    }
+                    break;
+                //
+                case 1:
+
+                    break;
+            }
+            break;
+        //
+        case 1:
+            //
+            switch(shape){
+                //
+                case 0:
+                    //
+                    switch(formula){
+                        //
+                        case 0:
+                            radius = document.getElementById("input_1").value;
+                            result = (4*(22/7)*radius*radius*radius)/3
+                            document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1>"
+                            document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1>"
+                            document.getElementById("formula-1").innerHTML = "4 π r ³ / 3"
+                            document.getElementById("formula-2").innerHTML = "[ { 4 × ( 22 / 7 ) × Radius × Radius × Radius } / 3 ]"
+                            document.getElementById("formula-3").innerHTML = "[ { 4 × ( 22 / 7 ) × " + Radius + " × " +  Radius + " × " + Radius + " } / 3 ]"
+                            document.getElementById("formula-4").innerHTML = "( " + (4*(22/7)*radius*radius*radius) + " ) / 3"
+                            document.getElementById("formula-5").innerHTML = result.toFixed(2)
+                            document.getElementById("result-1").innerHTML = result.toFixed(2)
+                            break;
+                        //
+                        case 1:
+                            radius = document.getElementById("input_1").value;
+                            result = (2*22/7*radius)
+                            document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1>"
+                            document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1>"
+                            document.getElementById("formula-1").innerHTML = "4 π r ²"
+                            document.getElementById("formula-2").innerHTML = "{ 4 × ( 22 / 7 ) × Radius × Radius }"
+                            document.getElementById("formula-3").innerHTML = "{ 4 × ( 22 / 7 ) × " + Radius +  " × " + Radius + " }"
+                            document.getElementById("formula-4").innerHTML = "( 22 / 7 ) × " + radius*radius*4
+                            document.getElementById("formula-5").innerHTML = result.toFixed(2)
+                            document.getElementById("result-1").innerHTML = result.toFixed(2)
+                            break;
+                    }
+                    break;
+                //
+                case 1:
+
+                    break;
+            }
+            break;
+    }
 }

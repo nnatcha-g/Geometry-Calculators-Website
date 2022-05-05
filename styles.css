@@ -10,20 +10,24 @@ body{
     width: 100%;
     height: 100%;
 }
+.page-content{
+    max-width: 100%;
+    max-height: 100%;
+}
 .content{
-    margin: 1.5vw 1.5vw 0 1.5vw;
+    margin: 3vh 3vh 0 3vh;
 }
 #title{
-    font-size: 1.5vw;
+    font-size: 3.5vh;
     text-shadow: 0 0 3px black;
-    padding: 0.25vw;
-    margin: 0.25vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
 }
 #name{
-    font-size: 1vw;
+    font-size: 2.5vh;
     text-shadow: 0 0 3px black;
-    padding: 0.25vw;
-    margin: 0.25vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
     text-align: center;
 }
 .glassmorphism{
@@ -34,41 +38,85 @@ body{
 }
 .container{
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    gap: 5%;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+    gap: 1vw;
     text-align: center;
     align-items: center;
 }
+.container-2{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    gap: 1vw;
+    text-align: center;
+    align-items: center;
+}
+.container-2 .glassmorphism{
+    padding: 0.5vw;
+}
 .glassmorphism img.lang-img{
-    max-width: 10%;
+    max-width: 5vh;
     align-items: center;
     cursor: pointer;
 }
 .change-dimension{
-    font-size: 1vw;
+    font-size: 2vh;
     text-shadow: 0 0 3px black;
-    padding: 0.25vw;
-    margin: 0.25vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
     text-align: center;
     cursor: pointer;
 }
 .change-formula{
-    font-size: 1vw;
+    font-size: 2vh;
     text-shadow: 0 0 3px black;
-    padding: 0.25vw;
-    margin: 0.25vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
     text-align: center;
     cursor: pointer;
 }
 .formula{
-    font-size: 1vw;
+    font-size: 1.5vh;
     text-shadow: 0 0 3px black;
-    padding: 0.25vw;
-    margin: 0.25vw;
+    padding: 0.3vw;
+    margin: 0.3vw;
     text-align: center;
-    cursor: pointer;
+}
+.form{
+    font-size: 2vh;
+    text-shadow: 0 0 3px black;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    text-align: center;
 }
 img#shape-img{
-    max-width: 40%;
+    max-width: 35vh;
     align-items: center;
+}
+input[type = number]{
+    height: 2vh;
+    border-radius: 20px;
+}
+button.formula{
+    border-radius: 20px;
+}
+.result{
+    font-size: 5.8vh;
+    text-shadow: 0 0 3px black;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    text-align: center;
+}
+.gap-1{
+    font-size: 1vh;
+    text-shadow: 0 0 3px black;
+    padding: 0.18vw;
+    margin: 0.18vw;
+    text-align: center;
+}
+.gap-2{
+    font-size: 1vh;
+    text-shadow: 0 0 3px black;
+    padding: 0.05vw;
+    margin: 0.05vw;
+    text-align: center;
 }
