@@ -4,7 +4,7 @@ var lang = 0
 // var dimension | 0 - 2D (Default) | 1 - 3D
 var dimension = 0
 
-// var shape | 0 - Circle, Sphere (Default) | 1 - Square, Cube | 2 - Rectangular, Cuboid
+// var shape | 0 - Circle, Sphere (Default) | 1 - Square, Cube
 var shape = 0
 
 // var formula | 0 - Area, Volume (Default) | 1 - Circumference, Surface Area
@@ -31,7 +31,7 @@ function page_update(){
                         //กรณีที่ shape = 0 | วงกลม, ทรงกลม
                         case 0:
                             document.getElementById("name").innerHTML = "Circle"
-                            document.getElementById("shape-img").src="/img/circle-en.png";
+                            document.getElementById("shape-img").src="circle-en.png";
                             //ใช้ Switch Case ตรวจสอบ Var formula
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
@@ -55,7 +55,7 @@ function page_update(){
                         //กรณีที่ shape = 1 | สี่เหลี่ยม, ลูกบาศก์
                         case 1:
                             document.getElementById("name").innerHTML = "Square"
-                            document.getElementById("shape-img").src="/img/square-en.png";
+                            document.getElementById("shape-img").src="square-en.png";
                             //ใช้ Switch Case ตรวจสอบ Var formula
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
@@ -76,30 +76,6 @@ function page_update(){
                                     break;
                             }
                             break;
-                        //กรณีที่ shape = 2 | Rectangular, Cuboid
-                        case 2:
-                            document.getElementById("name").innerHTML = "Rectangular"
-                            document.getElementById("shape-img").src="/img/rectangular-en.png";
-                            //ใช้ Switch Case ตรวจสอบ Var formula
-                            switch(formula){
-                                //กรณีที่ formula = 0 | Area, Volume
-                                case 0:
-                                    document.getElementById("formula-topic").innerHTML = "Area Formula: w ℓ"
-                                    document.getElementById("formula-detail").innerHTML= "( Width × Length )"
-                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">Width ( w ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br><label class=\"formula\" for=\"input_2\">Length ( ℓ ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_2\" name=\"input_2\" min=\"0\"><br>"
-                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"gap-2\"></h1>"
-                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-2\"></h1>"
-                                    break;
-                                //กรณีที่ formula = 1 | Circumference, Surface Area
-                                case 1:
-                                    document.getElementById("formula-topic").innerHTML = "Circumference Formula: 2 w + 2 ℓ"
-                                    document.getElementById("formula-detail").innerHTML= "{ ( Width + Width ) + ( Length + Length ) }"
-                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">Width ( w ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br><label class=\"formula\" for=\"input_2\">Length ( ℓ ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_2\" name=\"input_2\" min=\"0\"><br>"
-                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"gap-2\"></h1>"
-                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-2\"></h1>"
-                                    break;
-                            }
-                            break;
                     }
                     break;
                 //กรณีที่ dimension = 1 | 3D
@@ -111,7 +87,7 @@ function page_update(){
                         //กรณีที่ shape = 0 | วงกลม, ทรงกลม
                         case 0:
                             document.getElementById("name").innerHTML = "Sphere"
-                            document.getElementById("shape-img").src="/img/sphere-en.png";
+                            document.getElementById("shape-img").src="sphere-en.png";
                             //ใช้ Switch Case ตรวจสอบ Var formula
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
@@ -135,7 +111,7 @@ function page_update(){
                         //กรณีที่ shape = 1 | สี่เหลี่ยม, ลูกบาศก์
                         case 1:
                             document.getElementById("name").innerHTML = "Cube"
-                            document.getElementById("shape-img").src="/img/cube-en.png";
+                            document.getElementById("shape-img").src="cube-en.png";
                             //ใช้ Switch Case ตรวจสอบ Var formula
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
@@ -153,30 +129,6 @@ function page_update(){
                                     document.getElementById("input-form").innerHTML = "<h1 class=\"formula\"></h1><label class=\"formula\" for=\"input_1\">Width ( w ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br><h1 class=\"gap-1\"></h1>"
                                     document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1>"
                                     document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1>"
-                                    break;
-                            }
-                            break;
-                        //กรณีที่ shape = 2 | Rectangular, Cuboid
-                        case 2:
-                            document.getElementById("name").innerHTML = "Cuboid"
-                            document.getElementById("shape-img").src="/img/rectangular-en.png";
-                            //ใช้ Switch Case ตรวจสอบ Var formula
-                            switch(formula){
-                                //กรณีที่ formula = 0 | Area, Volume
-                                case 0:
-                                    document.getElementById("formula-topic").innerHTML = "Volume Formula: w ℓ"
-                                    document.getElementById("formula-detail").innerHTML= "( Width × Length )"
-                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">Width ( w ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br><label class=\"formula\" for=\"input_2\">Length ( ℓ ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_2\" name=\"input_2\" min=\"0\"><br>"
-                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"gap-2\"></h1>"
-                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-2\"></h1>"
-                                    break;
-                                //กรณีที่ formula = 1 | Circumference, Surface Area
-                                case 1:
-                                    document.getElementById("formula-topic").innerHTML = "Surface Area Formula: 2 w + 2 ℓ"
-                                    document.getElementById("formula-detail").innerHTML= "{ ( Width + Width ) + ( Length + Length ) }"
-                                    document.getElementById("input-form").innerHTML = "<label class=\"formula\" for=\"input_1\">Width ( w ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_1\" name=\"input_1\" min=\"0\"><br><label class=\"formula\" for=\"input_2\">Length ( ℓ ) : </label><br><input class=\"formula\" type=\"number\" id=\"input_2\" name=\"input_2\" min=\"0\"><br>"
-                                    document.getElementById("solution-box").innerHTML = "<h1 class=\"formula\" id=\"formula-1\"></h1><h1 class=\"formula\" id=\"formula-2\"></h1><h1 class=\"formula\" id=\"formula-3\"></h1><h1 class=\"formula\" id=\"formula-4\"></h1><h1 class=\"formula\" id=\"formula-5\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"formula\"></h1><h1 class=\"gap-2\"></h1>"
-                                    document.getElementById("result-box").innerHTML = "<h1 class=\"result\"></h1><h1 class=\"result\" id=\"result-1\"></h1><h1 class=\"result\"></h1><h1 class=\"formula\"></h1><h1 class=\"result\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-1\"></h1><h1 class=\"result\"></h1><h1 class=\"gap-2\"></h1>"
                                     break;
                             }
                             break;
@@ -201,7 +153,7 @@ function page_update(){
                         //กรณีที่ shape = 0 | วงกลม, ทรงกลม
                         case 0:
                             document.getElementById("name").innerHTML = "วงกลม"
-                            document.getElementById("shape-img").src="/img/circle-th.png";
+                            document.getElementById("shape-img").src="circle-th.png";
                             //ใช้ Switch Case ตรวจสอบ Var formula
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
@@ -225,7 +177,7 @@ function page_update(){
                         //กรณีที่ shape = 1 | สี่เหลี่ยม, ลูกบาศก์
                         case 1:
                             document.getElementById("name").innerHTML = "สี่เหลี่ยม"
-                            document.getElementById("shape-img").src="/img/square-th.png";
+                            document.getElementById("shape-img").src="square-th.png";
                             //ใช้ Switch Case ตรวจสอบ Var formula
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
@@ -257,7 +209,7 @@ function page_update(){
                         //กรณีที่ shape = 0 | วงกลม, ทรงกลม
                         case 0:
                             document.getElementById("name").innerHTML = "ทรงกลม"
-                            document.getElementById("shape-img").src="/img/sphere-th.png";
+                            document.getElementById("shape-img").src="sphere-th.png";
                             //ใช้ Switch Case ตรวจสอบ Var formula
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
@@ -281,7 +233,7 @@ function page_update(){
                         //กรณีที่ shape = 1 | สี่เหลี่ยม, ลูกบาศก์
                         case 1:
                             document.getElementById("name").innerHTML = "ลูกบาศก์"
-                            document.getElementById("shape-img").src="/img/cube-th.png";
+                            document.getElementById("shape-img").src="cube-th.png";
                             //ใช้ Switch Case ตรวจสอบ Var formula
                             switch(formula){
                                 //กรณีที่ formula = 0 | Area, Volume
